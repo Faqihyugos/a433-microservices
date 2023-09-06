@@ -1,0 +1,49 @@
+./build_push_image.sh 
+[+] Building 29.2s (10/10) FINISHED                                 docker:desktop-linux
+ => [internal] load .dockerignore                                                   0.0s
+ => => transferring context: 88B                                                    0.0s
+ => [internal] load build definition from Dockerfile                                0.0s
+ => => transferring dockerfile: 727B                                                0.0s
+ => [internal] load metadata for docker.io/library/node:14.21.3-slim                3.6s
+ => [auth] library/node:pull token for registry-1.docker.io                         0.0s
+ => [1/4] FROM docker.io/library/node:14.21.3-slim@sha256:198142146b4c47193348f641  0.0s
+ => [internal] load build context                                                   1.3s
+ => => transferring context: 27.82MB                                                1.3s
+ => CACHED [2/4] WORKDIR /app                                                       0.0s
+ => [3/4] COPY . .                                                                  1.5s
+ => [4/4] RUN npm install --production --unsafe-perm && npm run build              21.9s
+ => exporting to image                                                              0.7s
+ => => exporting layers                                                             0.7s
+ => => writing image sha256:487c9f6e0290b9178597b37c91faad6911dc0860eacad4357b5b7a  0.0s 
+ => => naming to docker.io/library/item-app:v1                                      0.0s 
+                                                                                         
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+REPOSITORY                    TAG         IMAGE ID       CREATED             SIZE
+item-app                      v1          487c9f6e0290   1 second ago        212MB
+ghcr.io/faqihyugos/item-app   v1          b6f3fef0a372   9 minutes ago       218MB
+faqyu117/item-app             v1          8552e72a7a50   5 hours ago         156MB
+faqyu117/item-app             <none>      4869ff3361db   6 hours ago         156MB
+todo-app                      v2          64062718de9b   7 hours ago         407MB
+hello-world                   v1          aa3f1913139d   7 hours ago         1.03GB
+hello-world                   latest      89be1c8332d5   8 hours ago         1.01GB
+mongo                         latest      00307f461add   4 days ago          735MB
+nginx                         alpine      433dbc17191a   8 days ago          42.6MB
+nginx                         latest      eea7b3dcba7e   3 weeks ago         187MB
+ubuntu                        latest      c6b84b685f35   3 weeks ago         77.8MB
+registry                      2           0030ba3d620c   4 weeks ago         24.1MB
+mysql                         5.7         92034fe9a41f   4 weeks ago         581MB
+node                          12-alpine   bb6d28039b8c   17 months ago       91MB
+mongo                         3           2f21415cb85f   2 years ago         453MB
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+Login Succeeded
+The push refers to repository [ghcr.io/faqihyugos/item-app]
+7d7ebb46bb74: Pushed 
+9d9af5c9238c: Pushed 
+2c65c4ce35aa: Layer already exists 
+928bc7057ef4: Layer already exists 
+b0666e48242f: Layer already exists 
+2e9d059eafd1: Layer already exists 
+e9c0f39d77af: Layer already exists 
+61a5c84a1270: Layer already exists 
+v1: digest: sha256:01113d092ae0c2055255634e3650f9ce433cbd4d72269d91d3a58a309e134d4b size: 1995
