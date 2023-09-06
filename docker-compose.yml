@@ -16,9 +16,6 @@ services:
     restart: on-failure
     ports:
       - 80:8080
-    working_dir: /app
-    volumes:
-      - ./:/app
     depends_on:
       - item-db
 
